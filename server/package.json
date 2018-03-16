@@ -1,0 +1,27 @@
+{
+  "name": "node-tests",
+  "version": "1.0.0",
+  "description": "Primus websockets proof of concept",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VivienAdnot/node-primus-ws-poc.git"
+  },
+  "keywords": [
+    "primus"
+  ],
+  "author": "Vivien Adnot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VivienAdnot/node-primus-ws-poc/issues"
+  },
+  "homepage": "https://github.com/VivienAdnot/node-primus-ws-poc#readme",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "primus": "^7.1.1"
+  },
+  "devDependencies": {}
+}
