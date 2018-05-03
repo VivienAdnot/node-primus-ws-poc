@@ -1,10 +1,10 @@
 {
   "name": "node-tests",
   "version": "1.0.0",
-  "description": "Primus websockets proof of concept",
+  "description": "Primus client",
   "main": "server.js",
   "scripts": {
-    "start": "pm2 start ./src/server.js --name server"
+    "start": "pm2 start ./server.js --name client"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,7 @@
   },
   "homepage": "https://github.com/VivienAdnot/node-primus-ws-poc#readme",
   "dependencies": {
-    "morgan": "^1.9.0",
-    "primus": "^7.1.1",
-    "sockjs": "^0.3.19"
+    "express": "^4.16.3"
   },
   "devDependencies": {}
 }
