@@ -4,7 +4,7 @@
   "description": "Primus websockets proof of concept",
   "main": "server.js",
   "scripts": {
-    "start": "pm2 start ./src/server.js --name server"
+    "start": "$(npm bin)/babel-node ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,22 @@
   },
   "homepage": "https://github.com/VivienAdnot/node-primus-ws-poc#readme",
   "dependencies": {
+    "ajv": "^6.4.0",
+    "ajv-async": "^1.0.1",
+    "express": "^4.16.3",
     "morgan": "^1.9.0",
     "primus": "^7.1.1",
+    "raven": "^2.6.0",
     "sockjs": "^0.3.19"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.11.0"
+  }
 }
