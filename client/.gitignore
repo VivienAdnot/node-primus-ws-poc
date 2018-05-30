@@ -1,2 +1,21 @@
-/node_modules/
+# Local config files #
+######################
+config/config.js
+
+# Vendors #
+######################
+/node_modules
+/dist
+socket.log
+
+# OS generated files #
+######################
+npm-debug.log
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+npm-debug.log*

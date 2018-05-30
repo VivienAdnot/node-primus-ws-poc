@@ -4,7 +4,7 @@
   "description": "Primus websockets proof of concept",
   "main": "server.js",
   "scripts": {
-    "start": "$(npm bin)/babel-node ./src/server.js"
+    "start": "nodemon --exec babel-node --ignore 'dist/*' src/server.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "ajv-async": "^1.0.1",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
-    "primus": "^7.1.1",
+    "primus": "^7.2.1",
     "raven": "^2.6.0",
     "sockjs": "^0.3.19"
   },

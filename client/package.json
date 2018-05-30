@@ -1,26 +1,19 @@
 {
-  "name": "node-tests",
+  "name": "primus-poc-client",
   "version": "1.0.0",
-  "description": "Primus client",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "pm2 start ./server.js --name client"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VivienAdnot/node-primus-ws-poc.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [
-    "primus"
+    "primus",
+    "sockjs"
   ],
   "author": "Vivien Adnot",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VivienAdnot/node-primus-ws-poc/issues"
-  },
-  "homepage": "https://github.com/VivienAdnot/node-primus-ws-poc#readme",
   "dependencies": {
     "express": "^4.16.3"
-  },
-  "devDependencies": {}
+  }
 }

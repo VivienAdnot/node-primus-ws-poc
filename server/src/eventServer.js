@@ -1,16 +1,7 @@
-import fileSystem from 'fs';
-import path from 'path';
 import Primus from 'primus';
 import addConnection from './Connection/index/connection.model';
 
 const WEBSOCKET_PATH = 'dist/primus.js';
-const __root = path.join(__dirname, '../');
-
-// create a write stream (in append mode)
-const accessLogStream = fileSystem.createWriteStream(
-    `${__root}/socket.log`,
-    { flags: 'w' }
-);
 
 export default class EventServer {
 
@@ -67,7 +58,6 @@ export default class EventServer {
     static log(message) {
 
         console.log(`[socket:server] ${message}`);
-        accessLogStream.write(`${message} \n`);
 
     }
 
