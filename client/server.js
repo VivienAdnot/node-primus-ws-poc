@@ -13,3 +13,4 @@ app.get('*', (req, res) => {
 });
 
 app.listen(5000);
+console.log('primus-poc client should be listening at :5000');

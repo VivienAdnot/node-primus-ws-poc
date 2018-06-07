@@ -26,4 +26,6 @@ const httpServer = http
     .createServer(app)
     .listen(8050);
 
+console.log('primus-poc server should be listening at :8050');
+
 global.eventServer = new EventServer(httpServer);

@@ -1,6 +1,7 @@
+var websocketHost = "http://localhost:8050/primus";
+
 var _user = "1234";
 var name = "vivien";
-var websocketHost = "http://localhost:8050/primus";
 
 var primus = new Primus(
     `${websocketHost}?_user=${_user}&name=${name}&client=web`,
