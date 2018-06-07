@@ -1,24 +1,15 @@
 import Primus from 'primus';
-import addConnection from './Connection/index/connection.model';
-
-const WEBSOCKET_PATH = 'dist/primus.js';
 
 export default class EventServer {
 
     constructor(httpServer) {
 
-        global.sockets = {};
-
         this.primus = new Primus(httpServer, {
             transformer: 'sockjs'
         });
 
-        this.primus.save(WEBSOCKET_PATH, () => {
-
-            this.primus.on('connection', EventServer.onConnection.bind(this));
-            this.primus.on('data', EventServer.handleMessage.bind(this));
-
-        });
+        this.primus.on('connection', EventServer.onConnection.bind(this));
+        this.primus.on('data', EventServer.handleMessage.bind(this));
 
     }
 
@@ -32,20 +23,6 @@ export default class EventServer {
         spark.on('data', data => EventServer.handleMessage(data, spark));
 
         spark.write('ping: hello connection');
-
-        if (global.sockets[_user] === undefined) {
-
-            global.sockets[_user] = {};
-
-        }
-
-        global.sockets[_user][_spark] = spark;
-
-        addConnection({
-            type: client,
-            _user,
-            _spark
-        });
 
     }
 
