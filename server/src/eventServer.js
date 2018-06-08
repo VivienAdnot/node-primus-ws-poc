@@ -1,5 +1,7 @@
 import Primus from 'primus';
 
+const WEBSOCKET_PATH = 'dist/primus.js';
+
 export default class EventServer {
 
     constructor(httpServer) {
@@ -8,8 +10,12 @@ export default class EventServer {
             transformer: 'sockjs'
         });
 
-        this.primus.on('connection', EventServer.onConnection.bind(this));
-        this.primus.on('data', EventServer.handleMessage.bind(this));
+        this.primus.save(WEBSOCKET_PATH, () => {
+
+            this.primus.on('connection', EventServer.onConnection.bind(this));
+            this.primus.on('data', EventServer.handleMessage.bind(this));
+
+        });
 
     }
 
