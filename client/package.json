@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "webpack -p",
+    "start": "node client-server.js"
   },
   "keywords": [
     "primus",
@@ -14,6 +14,14 @@
   "author": "Vivien Adnot",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "primus": "6.1.0",
+    "sockjs": "0.3.19",
+    "webpack": "^1.15.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "primus-client-webpack-plugin": "^1.0.1",
+    "webpack-cli": "^3.0.3"
   }
 }

@@ -1,13 +1,13 @@
 const express = require('express');
 const path = require('path');
 
-var app = express();
+const app = express();
 
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/dist`));
 
 app.get('*', (req, res) => {
 
-    const fileUrl = path.join(__dirname, 'public/index.html');
+    const fileUrl = path.join(__dirname, 'dist/index.html');
     res.sendFile(fileUrl);
 
 });

@@ -6,7 +6,6 @@ config/config.js
 ######################
 /node_modules
 /dist
-socket.log
 
 # OS generated files #
 ######################

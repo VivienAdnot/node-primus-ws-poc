@@ -7,6 +7,7 @@ import EventServer from './eventServer';
 const app = express();
 
 const sentryUrl = 'https://b722fedddaa648aaaa4146df487e02d0@sentry.io/1200283';
+
 Raven
     .config(sentryUrl, {
         captureUnhandledRejections: true
